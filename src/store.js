@@ -30,7 +30,7 @@ function initialState() {
 			},
 			{
 				id: 4,
-				name: "against All authority",
+				name: "Against All Authority",
 				wins: 4,
 				losses: 6,
 				logo: "aaa.png",
