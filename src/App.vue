@@ -11,6 +11,10 @@
 					</div>
 					<ladder></ladder>
 					<button class="button" @click="resetLadder">Reset</button>
+					<a href="//twitter.com/Chypriote" target="_blank" class="button twitter">
+						<img src="/assets/picto-twitter-bleu.svg" alt="Twitter">
+						<span>Chypriote</span>
+					</a>
 				</div>
 			</div>
 			<div class="col-12 col-md-5 offset-md-1">
@@ -83,6 +87,13 @@ export default {
 		background-color: #0d0d0d;
 		color: #f1e6d2;
 		border: 2px solid #ffd866;
+	}
+	&.twitter {
+    color: #1da1f2;
+    margin-left: 2rem;
+    text-transform: none;
+    span {margin-left: .5rem;}
+    img {height: 1rem;}
 	}
 }
 h1 {
