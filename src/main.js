@@ -3,7 +3,7 @@ import App from './App.vue';
 import store from './store';
 
 import VueAnalytics from 'vue-analytics';
-Vue.use(VueAnalytics, { id: process.env.VUE_APP_google_analytics });
+Vue.use(VueAnalytics, { id: 'UA-115209665-9' });
 
 Vue.config.productionTip = false;
 
