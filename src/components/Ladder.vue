@@ -34,8 +34,6 @@ export default {
 table {background-color: #1e1e1e;}
 th {border-bottom: 5px solid #191919; text-align: center;color: #999485;}
 td {border-bottom: 3px solid #191919; color: #f1e6d2;}
-td.name {text-align: left;padding-left: 1rem;
-    font-family: "Gobold Thin";
-    text-transform: uppercase;}
+td.name {text-align: left;padding-left: 1rem;}
 img {width: 1.5rem;margin-right: .5rem;}
 </style>
