@@ -3,7 +3,7 @@
 		<div class="top-banner">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-12 col-md-4 offset-md-1">
+			<div class="* col-md-4 offset-md-1">
 				<div class="sticky">
 					<div>
 						<img alt="LFL logo" src="/assets/lfl-logo.png" class="logo">
@@ -17,7 +17,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="col-12 col-md-5 offset-md-1">
+			<div class="* col-md-5 offset-md-1" style="height: 100vh;overflow-y: scroll;">
 				<div class="row" v-for="week in weeks" :key="`${week.number}${week.day}`">
 					<div class="col">
 						<week :week="week"></week>
@@ -109,5 +109,17 @@ h1 {
 		-webkit-text-fill-color: transparent;
 		display: block;
 		text-align: center;
+}
+*::-webkit-scrollbar {
+  width: 6px;
+  background-color: #1e1e1e;
+}
+
+*::-webkit-scrollbar-track {
+	background-color: #f1e6d2;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #212529;
 }
 </style>
