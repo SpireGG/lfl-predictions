@@ -2,13 +2,13 @@
 	<div class="match row">
 		<input type="radio" :name="match.id" :value="team_blue.id" v-model="match.winner" />
 		<label class="col-5" @click="setWinner(team_blue.id)">
-			<img :src="`/assets/${team_blue.logo}`" :alt="team_blue.name">
+			<img :src="`/assets/${league}/${team_blue.logo}`" :alt="team_blue.name">
 			<span class="hide-md">{{ team_blue.name }}</span>
 		</label>
 		<div class="versus col-2">vs</div>
 		<input type="radio" :name="match.id" :value="team_red.id" v-model="match.winner" />
 		<label class="col-5" @click="setWinner(team_red.id)">
-			<img :src="`/assets/${team_red.logo}`" :alt="team_red.name">
+			<img :src="`/assets/${league}/${team_red.logo}`" :alt="team_red.name">
 			<span class="hide-md">{{ team_red.name }}</span>
 		</label>
 	</div>
@@ -23,12 +23,13 @@ export default {
 		winner: null,
 	}),
 	computed: {
-		team_blue() { return this.$store.getters.team(this.match.team_blue); },
-		team_red() { return this.$store.getters.team(this.match.team_red); },
+		league() { return this.$store.state.selected_league; },
+		team_blue() { return this.$store.getters[`${this.league}/team`](this.match.team_blue); },
+		team_red() { return this.$store.getters[`${this.league}/team`](this.match.team_red); },
 	},
 	methods: {
 		setWinner(winner) {
-			this.$store.commit('SET_WINNER', { id: this.match.id, winner: winner });
+			this.$store.commit(`${this.league}/SET_WINNER`, { id: this.match.id, winner: winner });
 		},
 	},
 };

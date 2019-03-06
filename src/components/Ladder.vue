@@ -12,7 +12,7 @@
 		<tbody>
 		<tr v-for="(team, index) in ladder" :key="team.name">
 			<td>{{ index + 1}}</td>
-			<td class="name"><img :src="`/assets/${team.logo}`" :alt="team.name"> <span class="hide-md">{{ team.name }}</span></td>
+			<td class="name"><img :src="`/assets/${league}/${team.logo}`" :alt="team.name"> <span class="hide-md">{{ team.name }}</span></td>
 			<td>{{ team.wins }}</td>
 			<td>{{ team.losses }}</td>
 			<td>{{ team.wins + team.losses }}</td>
@@ -25,7 +25,8 @@
 import { orderBy } from 'lodash-es';
 export default {
 	computed: {
-		ladder() { return orderBy(this.$store.getters.ladder, ['wins', 'name'], ['desc', 'asc']);},
+		league() { return this.$store.state.selected_league; },
+		ladder() { return orderBy(this.$store.getters[`${this.league}/ladder`], ['wins', 'name'], ['desc', 'asc']);},
 	},
 };
 </script>

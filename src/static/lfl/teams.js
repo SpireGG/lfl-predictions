@@ -1,0 +1,58 @@
+export const teams = [
+	{
+		id: 1,
+		name: "Team-LDLC",
+		wins: 10,
+		losses: 1,
+		logo: "team-ldlc.png",
+	},
+	{
+		id: 2,
+		name: "GamersOrigin",
+		wins: 7,
+		losses: 4,
+		logo: "gamersorigin.png",
+	},
+	{
+		id: 3,
+		name: "Misfits Premier",
+		wins: 7,
+		losses: 4,
+		logo: "misfits.png",
+	},
+	{
+		id: 4,
+		name: "Against All Authority",
+		wins: 5,
+		losses: 6,
+		logo: "aaa.png",
+	},
+	{
+		id: 5,
+		name: "ROG Esport",
+		wins: 6,
+		losses: 5,
+		logo: "rogesport.png",
+	},
+	{
+		id: 6,
+		name: "Vitality.Bee",
+		wins: 4,
+		losses: 7,
+		logo: "vitality.png",
+	},
+	{
+		id: 7,
+		name: "Solary",
+		wins: 2,
+		losses: 9,
+		logo: "solary.png",
+	},
+	{
+		id: 8,
+		name: "Team MCES",
+		wins: 3,
+		losses: 8,
+		logo: "mces.png",
+	},
+];
