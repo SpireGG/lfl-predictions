@@ -12,7 +12,7 @@
 		<tbody>
 		<tr v-for="(team, index) in ladder" :key="team.name">
 			<td>{{ index + 1}}</td>
-			<td class="name"><img :src="`/assets/${team.logo}`" :alt="team.name"> {{ team.name }}</td>
+			<td class="name"><img :src="`/assets/${team.logo}`" :alt="team.name"> <span class="hide-md">{{ team.name }}</span></td>
 			<td>{{ team.wins }}</td>
 			<td>{{ team.losses }}</td>
 			<td>{{ team.wins + team.losses }}</td>

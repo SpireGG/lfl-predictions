@@ -3,13 +3,13 @@
 		<input type="radio" :name="match.id" :value="team_blue.id" v-model="match.winner" />
 		<label class="col-5" @click="setWinner(team_blue.id)">
 			<img :src="`/assets/${team_blue.logo}`" :alt="team_blue.name">
-			<span class="hide-sm">{{ team_blue.name }}</span>
+			<span class="hide-md">{{ team_blue.name }}</span>
 		</label>
 		<div class="versus col-2">vs</div>
 		<input type="radio" :name="match.id" :value="team_red.id" v-model="match.winner" />
 		<label class="col-5" @click="setWinner(team_red.id)">
 			<img :src="`/assets/${team_red.logo}`" :alt="team_red.name">
-			<span class="hide-sm">{{ team_red.name }}</span>
+			<span class="hide-md">{{ team_red.name }}</span>
 		</label>
 	</div>
 </template>
