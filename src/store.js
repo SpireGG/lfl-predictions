@@ -9,6 +9,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
 	state: {
 		selected_league: 'lfl',
+		language: 'en',
 	},
 	mutations: {
 		TOGGLE_LEAGUE(state) {
@@ -16,6 +17,9 @@ export default new Vuex.Store({
 		},
 		SELECT_LEAGUE(state, value) {
 			state.selected_league = value;
+		},
+		TOGGLE_LANGUAGE(state, language) {
+			state.language = language;
 		},
 	},
 	modules: {

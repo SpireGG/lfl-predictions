@@ -10,7 +10,10 @@
 					</div>
 					<ladder />
 					<router-link :to="{ name: 'league', params: { league: league === 'lfl' ? 'lvp' : 'lfl' } }" class="button">{{ league === 'lfl' ? 'lvp' : 'lfl' }}</router-link>
-					<button class="button" @click="resetLadder">Reset</button>
+					<button class="button" @click="resetLadder">{{ $t('ladder.reset') }}</button>
+					<button class="button" @click="toggleLanguage">
+						<img :src="`/assets/flags/${locale === 'fr' ? 'gb' : 'fr'}.svg`" :alt="locale === 'fr' ? 'English' : 'Français'">
+					</button>
 					<a href="//twitter.com/Chypriote" target="_blank" class="button twitter">
 						<img src="/assets/picto-twitter-bleu.svg" alt="Twitter">
 						<span>Chypriote</span>
@@ -42,9 +45,15 @@ export default {
 	computed: {
 		league() { return this.$store.state.selected_league; },
 		weeks() { return this.$store.state[this.league]['weeks']; },
+		locale() {return this.$store.state.language;},
 	},
 	methods: {
 		resetLadder() { this.$store.commit(`${this.league}/RESET`); },
+		toggleLanguage() {
+			let lang = this.locale === 'fr' ? 'en' : 'fr';
+			this.$store.commit('TOGGLE_LANGUAGE', lang);
+			this.$i18n.locale = lang;
+		},
 	},
 	mounted() {
 		if (this.$route.params.league) {
@@ -89,14 +98,16 @@ export default {
 		color: #f1e6d2;
 		border: 2px solid #ffd866;
 	}
+	& + .button {margin-left: 2rem;}
 	&.twitter {
     color: #1da1f2;
     text-transform: none;
+		margin-left: 1rem;
     span {margin-left: .5rem;}
     img {height: 1rem;}
 	}
+	img {width: 1.5rem;}
 }
-.button + .button {margin-left: 2rem;}
 h1 {
 		user-select: none;
 		font-family: 'Gobold Thin';

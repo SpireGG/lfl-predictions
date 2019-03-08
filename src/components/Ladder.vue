@@ -3,10 +3,10 @@
 		<thead>
 		<tr>
 			<th></th>
-			<th>Equipe</th>
-			<th title="Victoires">V</th>
-			<th title="Défaites">D</th>
-			<th title="Jouées">J</th>
+			<th>{{ $t('ladder.team') }}</th>
+			<th :title="$t('ladder.long.victory')">{{ $t('ladder.short.victory') }}</th>
+			<th :title="$t('ladder.long.defeat')">{{ $t('ladder.short.defeat') }}</th>
+			<th :title="$t('ladder.long.played')">{{ $t('ladder.short.played') }}</th>
 		</tr>
 		</thead>
 		<tbody>

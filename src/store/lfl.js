@@ -29,8 +29,6 @@ const LFLModule = {
 			});
 		},
 	},
-	actions: {
-	},
 	getters: {
 		team: (state) => (id) => {
 			return find(state.teams, team => team.id === id);

@@ -1,6 +1,6 @@
 <template>
 	<div class="week">
-		<h3>Semaine {{ week.number }} - Jour {{ week.day }} </h3>
+		<h3>{{ $t('week.week', {nb: week.number}) }} - {{ $t('week.day', {nb: week.day}) }}</h3>
 		<div class="match-week">
 		<match v-for="match of week.matchs" :match="match" :key="match.id" />
 	</div>
