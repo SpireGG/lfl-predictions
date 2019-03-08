@@ -1,17 +1,17 @@
-import { find, map, each } from 'lodash-es';
+import { find, map, each, cloneDeep } from 'lodash-es';
 import { teams } from '@/static/lfl/teams';
 import { weeks } from '@/static/lfl/weeks';
 
 function initialState() {
 	return {
-		teams,
-		weeks,
+		teams: cloneDeep(teams),
+		weeks: cloneDeep(weeks),
 	};
 }
 
 const LFLModule = {
 	namespaced: true,
-	state: initialState,
+	state: initialState(),
 	mutations: {
 		SET_WINNER(state, payload) {
 			each(state.weeks, week => {
