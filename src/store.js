@@ -14,6 +14,9 @@ export default new Vuex.Store({
 		TOGGLE_LEAGUE(state) {
 			state.selected_league = state.selected_league === 'lvp' ? 'lfl' : 'lvp';
 		},
+		SELECT_LEAGUE(state, value) {
+			state.selected_league = value;
+		},
 	},
 	modules: {
 		lfl,

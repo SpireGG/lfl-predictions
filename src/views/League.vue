@@ -9,7 +9,7 @@
 						<h1><span style="text-transform: uppercase;">{{ league }}</span> Predictions</h1>
 					</div>
 					<ladder />
-					<!--<button class="button" @click="toggleLeague">{{ league === 'lfl' ? 'LVP' : 'LFL' }}</button>-->
+					<router-link :to="{ name: 'league', params: { league: league === 'lfl' ? 'lvp' : 'lfl' } }" class="button">{{ league === 'lfl' ? 'lvp' : 'lfl' }}</router-link>
 					<button class="button" @click="resetLadder">Reset</button>
 					<a href="//twitter.com/Chypriote" target="_blank" class="button twitter">
 						<img src="/assets/picto-twitter-bleu.svg" alt="Twitter">
@@ -34,7 +34,7 @@ import Ladder from '@/components/Ladder.vue';
 import Week from '@/components/Week.vue';
 
 export default {
-	name: 'home',
+	name: 'league',
 	components: {
 		Ladder,
 		Week,
@@ -45,7 +45,16 @@ export default {
 	},
 	methods: {
 		resetLadder() { this.$store.commit(`${this.league}/RESET`); },
-		toggleLeague() { this.$store.commit('TOGGLE_LEAGUE'); },
+	},
+	mounted() {
+		if (this.$route.params.league) {
+			this.$store.commit('SELECT_LEAGUE', this.$route.params.league);
+		}
+	},
+	watch: {
+		'$route.params.league'(value) {
+			this.$store.commit('SELECT_LEAGUE', value);
+		},
 	},
 };
 </script>

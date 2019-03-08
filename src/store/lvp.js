@@ -1,17 +1,17 @@
-import { find, map, each } from 'lodash-es';
+import { find, map, each, cloneDeep } from 'lodash-es';
 import { teams } from '@/static/lvp/teams';
 import { weeks } from '@/static/lvp/weeks';
 
 function initialState() {
 	return {
-		teams,
-		weeks,
+		teams: cloneDeep(teams),
+		weeks: cloneDeep(weeks),
 	};
 }
 
 const LVPModule = {
 	namespaced: true,
-	state: initialState,
+	state: initialState(),
 	mutations: {
 		SET_WINNER(state, payload) {
 			each(state.weeks, week => {

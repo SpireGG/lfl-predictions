@@ -5,14 +5,13 @@ import League from '@/views/League.vue';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
 	mode: 'history',
 	base: process.env.BASE_URL,
 	routes: [
 		{
 			path: '/',
-			name: 'home',
-			component: League,
+			redirect: { name: 'league', params: { league: 'lfl' } },
 		},
 		{
 			path: '/:league',
@@ -21,3 +20,4 @@ export default new Router({
 		},
 	],
 });
+export default router;
