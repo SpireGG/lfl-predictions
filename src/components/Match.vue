@@ -1,13 +1,13 @@
 <template>
 	<div class="match row">
 		<input type="radio" :name="match.id" :value="team_blue.id" v-model="match.winner" />
-		<label class="col-5" @click="setWinner(team_blue.id)">
+		<label @click="setWinner(team_blue.id)">
 			<img :src="`/assets/${league}/${team_blue.logo}`" :alt="team_blue.name">
 			<span class="hide-md">{{ team_blue.name }}</span>
 		</label>
-		<div class="versus col-2">vs</div>
+		<div class="versus">vs</div>
 		<input type="radio" :name="match.id" :value="team_red.id" v-model="match.winner" />
-		<label class="col-5" @click="setWinner(team_red.id)">
+		<label @click="setWinner(team_red.id)">
 			<img :src="`/assets/${league}/${team_red.logo}`" :alt="team_red.name">
 			<span class="hide-md">{{ team_red.name }}</span>
 		</label>
@@ -36,7 +36,9 @@ export default {
 </script>
 
 <style>
-
+.versus {
+	padding: 0 1rem;
+}
 .match {
 	width: 100%;
 	text-align: center;
@@ -45,13 +47,14 @@ export default {
 	color: #f1e6d2;
 	box-shadow: 0 1px 2px 0 rgba(50,50,50,.4);
 
-&.row {margin: 0;}
+	&.row {margin: 0;}
 	label {
 		display: flex;
 		align-items: center;
 		padding: .75rem 1rem;
 		margin: 0;
 		font-size: 1.2rem;
+		flex: 1;
 		img { width: 2rem; margin-right: .5rem;}
 		&:hover {
 			background-color: #191919;

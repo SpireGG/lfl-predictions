@@ -20,13 +20,8 @@ export default {
 </script>
 
 <style scoped>
-	.week {
-		margin-top: 2rem;
-		&:last-of-type {margin-bottom: 2rem;}
-	}
-	h3 {
-		color: #fcd359;
-	}
+	.week:last-of-type {margin-bottom: 2rem;}
+	h3 { color: #fcd359; }
 	.match-week {
 		border: 1px solid #999485;
 	}

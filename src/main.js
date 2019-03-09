@@ -7,6 +7,9 @@ import i18n from './i18n';
 import VueAnalytics from 'vue-analytics';
 Vue.use(VueAnalytics, { id: 'UA-115209665-9', router });
 
+import LolprosLogo from '@/components/LolprosLogo';
+Vue.component('lolpros-logo', LolprosLogo);
+
 Vue.config.productionTip = false;
 
 new Vue({
