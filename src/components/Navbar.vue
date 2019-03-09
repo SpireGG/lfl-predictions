@@ -1,10 +1,12 @@
 <template>
 	<div class="main-nav">
 		<div class="lolpros-container">
-			<span class="subtitle">A tool by</span>
-			<a href="//lolpros.gg" target="_blank" rel="noopener" style="font-size: 1.5rem"><lolpros-logo /></a>
+			<a href="//lolpros.gg" target="_blank" rel="noopener" style="font-size: 1.5rem">
+				<span class="subtitle">A tool by</span>
+				<lolpros-logo />
+			</a>
 		</div>
-		<div class="nav-container">
+		<div class="container">
 			<div class="nav-content">
 				<router-link :to="{name: 'league', params: {league: 'lfl'}}" class="nav-link">
 					<img src="/assets/logos/lfl-logo.png" alt="LFL logo">
@@ -80,9 +82,7 @@ export default {
 		}
 	}
 
-	.nav-container {
-		width: 1150px;
-		margin: 0 auto;
+	.container {
 		flex: none;
 	}
 
@@ -141,7 +141,9 @@ export default {
 		.subtitle {
 			position: absolute;
 			top: -.5rem;
-			left: 1rem;
+			left: -5rem;
+			right: 0;
+			margin: auto;
 			font-size: .7rem;
 			color: #ccc;
 		}
