@@ -65,6 +65,7 @@ export default {
 <style scoped>
 .sticky {
 	position: sticky;
+	top: 8rem;
 	display: flex;
 	flex-direction: column;
 }
@@ -79,14 +80,9 @@ export default {
 	background-position: top left, top right, bottom left, bottom right;
 }
 h1 {
-		user-select: none;
-		font-family: serif;
-		font-size: 38px;
-		letter-spacing: 8px;
-		margin-bottom: 2rem;
-		color: #fcd359;
-		line-height: normal;
-		display: block;
-		text-align: center;
+	font-family: serif;
+	letter-spacing: 8px;
+	margin-bottom: 2rem;
+	color: #fcd359;
 }
 </style>

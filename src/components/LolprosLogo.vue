@@ -7,6 +7,8 @@
 	font-family: 'Leixo', Lato, sans-serif;
 	font-weight: bold;
 	color: #fff;
+	letter-spacing: initial;
+	line-height: initial;
 	.accent {color: #08bfd5;}
 }
 </style>
