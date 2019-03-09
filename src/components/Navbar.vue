@@ -7,11 +7,11 @@
 		<div class="nav-container">
 			<div class="nav-content">
 				<router-link :to="{name: 'league', params: {league: 'lfl'}}" class="nav-link">
-					<img :src="`/assets/lfl-logo.png`" alt="LFL logo">
+					<img src="../static/assets/logos/lfl-logo.png" alt="LFL logo">
 					<span>LFL</span>
 				</router-link>
 				<a class="nav-link disabled">
-					<img :src="`/assets/ul-logo.png`" alt="UL logo">
+					<img src="../static/assets/logos/ul-logo.png" alt="UL logo">
 					<span>UL</span>
 				</a>
 				<div class="logo">
@@ -20,25 +20,25 @@
 					</a>
 				</div>
 				<router-link :to="{name: 'league', params: {league: 'lvp'}}" class="nav-link">
-					<img :src="`/assets/lvp-logo.png`" alt="LVP logo">
+					<img src="../static/assets/logos/lvp-logo.png" alt="LVP logo">
 					<span>LVP</span>
 				</router-link>
 				<a class="nav-link disabled">
-					<img :src="`/assets/eslm-logo.png`" alt="ESLM logo">
+					<img src="../static/assets/logos/eslm-logo.png" alt="ESLM logo">
 					<span>ESLM</span>
 				</a>
 				<a class="nav-link disabled">
-					<img :src="`/assets/pgn-logo.png`" alt="PGN logo">
+					<img src="../static/assets/logos/pgn-logo.png" alt="PGN logo">
 					<span>PGN</span>
 				</a>
 				<a class="nav-link disabled">
-					<img :src="`/assets/uklc-logo.png`" alt="UKLC logo">
+					<img src="../static/assets/logos/uklc-logo.png" alt="UKLC logo">
 				</a>
 			</div>
 		</div>
 		<div class="twitter-container">
 			<a href="//twitter.com/Chypriote" target="_blank" class="twitter">
-				<img src="/assets/picto-twitter-bleu.svg" alt="Twitter">
+				<img src="../static/assets/picto-twitter-bleu.svg" alt="Twitter">
 				<span>Chypriote</span>
 			</a>
 		</div>
@@ -116,7 +116,7 @@ export default {
 			position: absolute;
 			left: calc(50% - 77px);
 			bottom: -5px;
-			background-image: url(http://lollfl.com//assets/menu_current.png?132909739);
+			background-image: url(../static/assets/menu_current.png);
 			background-repeat: no-repeat;
 			transition: all 0.2s;
 			opacity: 0;
@@ -143,7 +143,7 @@ export default {
 			top: -.5rem;
 			left: 1rem;
 			font-size: .7rem;
-			color: #eee;
+			color: #ccc;
 		}
 	}
 	.twitter-container {

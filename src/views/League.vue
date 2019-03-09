@@ -75,7 +75,7 @@ export default {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-image: url(/declin-particule-left.png?809149183), url(/declin-particule-right.png?809149183), url(/declin-particule-bottom-left.png?809149183), url(/declin-particule-bottom-right.png?809149183), linear-gradient(175deg, #1c1c1c, #0d0d0d);
+	background-image: url(../static/assets/declin-particule-left.png?809149183), url(../static/assets/declin-particule-right.png?809149183), url(../static/assets/declin-particule-bottom-left.png?809149183), url(../static/assets/declin-particule-bottom-right.png?809149183), linear-gradient(175deg, #1c1c1c, #0d0d0d);
 	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
 	background-position: top left, top right, bottom left, bottom right;
 }
