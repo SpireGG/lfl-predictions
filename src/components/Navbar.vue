@@ -7,32 +7,32 @@
 		<div class="nav-container">
 			<div class="nav-content">
 				<router-link :to="{name: 'league', params: {league: 'lfl'}}" class="nav-link">
-					<img src="../static/assets/logos/lfl-logo.png" alt="LFL logo">
+					<img src="/assets/logos/lfl-logo.png" alt="LFL logo">
 					<span>LFL</span>
 				</router-link>
 				<a class="nav-link disabled">
-					<img src="../static/assets/logos/ul-logo.png" alt="UL logo">
+					<img src="/assets/logos/ul-logo.png" alt="UL logo">
 					<span>UL</span>
 				</a>
 				<div class="logo">
 					<a href="/">
-						<img :src="`/assets/${league}-logo.png`" alt="LFL logo">
+						<img :src="`/assets/logos/${league}-logo.png`" alt="LFL logo">
 					</a>
 				</div>
 				<router-link :to="{name: 'league', params: {league: 'lvp'}}" class="nav-link">
-					<img src="../static/assets/logos/lvp-logo.png" alt="LVP logo">
+					<img src="/assets/logos/lvp-logo.png" alt="LVP logo">
 					<span>LVP</span>
 				</router-link>
 				<a class="nav-link disabled">
-					<img src="../static/assets/logos/eslm-logo.png" alt="ESLM logo">
+					<img src="/assets/logos/eslm-logo.png" alt="ESLM logo">
 					<span>ESLM</span>
 				</a>
 				<a class="nav-link disabled">
-					<img src="../static/assets/logos/pgn-logo.png" alt="PGN logo">
+					<img src="/assets/logos/pgn-logo.png" alt="PGN logo">
 					<span>PGN</span>
 				</a>
 				<a class="nav-link disabled">
-					<img src="../static/assets/logos/uklc-logo.png" alt="UKLC logo">
+					<img src="/assets/logos/uklc-logo.png" alt="UKLC logo">
 				</a>
 			</div>
 		</div>
