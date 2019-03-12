@@ -55,6 +55,7 @@ a {
 	border: 2px solid #ffd866;
 	color: #fcd359;
 	text-transform: uppercase;
+  line-height: 1;
 	&:hover {
 		background-color: #0d0d0d;
 		color: #f1e6d2;

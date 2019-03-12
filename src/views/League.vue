@@ -70,7 +70,7 @@ export default {
 	flex-direction: column;
 }
 .top-banner {
-	padding-top: 2rem;
+	padding-top: 3rem;
 	position: relative;
 	display: flex;
 	flex-direction: column;
