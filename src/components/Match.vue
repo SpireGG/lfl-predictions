@@ -7,9 +7,9 @@
 		</label>
 		<div class="versus">vs</div>
 		<input type="radio" :name="match.id" :value="team_red.id" v-model="match.winner" />
-		<label @click="setWinner(team_red.id)">
-			<img :src="`/assets/${league}/${team_red.logo}`" :alt="team_red.name">
+		<label @click="setWinner(team_red.id)" class="right">
 			<span class="hide-md">{{ team_red.name }}</span>
+			<img :src="`/assets/${league}/${team_red.logo}`" :alt="team_red.name">
 		</label>
 	</div>
 </template>
@@ -48,6 +48,7 @@ export default {
 	box-shadow: 0 1px 2px 0 rgba(50,50,50,.4);
 
 	&.row {margin: 0;}
+	.right {justify-content: flex-end; img {margin-right: 0;margin-left: .5rem;}}
 	label {
 		display: flex;
 		align-items: center;
