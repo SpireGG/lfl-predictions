@@ -71,6 +71,7 @@ export default {
 }
 .top-banner {
 	padding-top: 3rem;
+	min-height: calc(100vh - 5rem);
 	position: relative;
 	display: flex;
 	flex-direction: column;

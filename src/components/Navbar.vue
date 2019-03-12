@@ -12,6 +12,10 @@
 					<img src="/assets/logos/lfl-logo.png" alt="LFL logo">
 					<span>LFL</span>
 				</router-link>
+				<router-link :to="{name: 'league', params: {league: 'lvp'}}" class="nav-link">
+					<img src="/assets/logos/lvp-logo.png" alt="LVP logo">
+					<span>LVP</span>
+				</router-link>
 				<a class="nav-link disabled">
 					<img src="/assets/logos/ul-logo.png" alt="UL logo">
 					<span>UL</span>
@@ -21,14 +25,11 @@
 						<img :src="`/assets/logos/${league}-logo.png`" alt="LFL logo">
 					</a>
 				</div>
-				<router-link :to="{name: 'league', params: {league: 'lvp'}}" class="nav-link">
-					<img src="/assets/logos/lvp-logo.png" alt="LVP logo">
-					<span>LVP</span>
-				</router-link>
-				<a class="nav-link disabled">
+				<div class="nav-link"></div>
+				<router-link :to="{name: 'league', params: {league: 'eslm'}}" class="nav-link">
 					<img src="/assets/logos/eslm-logo.png" alt="ESLM logo">
 					<span>ESLM</span>
-				</a>
+				</router-link>
 				<a class="nav-link disabled">
 					<img src="/assets/logos/pgn-logo.png" alt="PGN logo">
 					<span>PGN</span>

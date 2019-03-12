@@ -3,6 +3,7 @@ import Vuex from 'vuex';
 
 import lfl from '@/store/lfl';
 import lvp from '@/store/lvp';
+import eslm from '@/store/eslm';
 
 Vue.use(Vuex);
 
@@ -25,5 +26,6 @@ export default new Vuex.Store({
 	modules: {
 		lfl,
 		lvp,
+		eslm,
 	},
 });
