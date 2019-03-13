@@ -1,16 +1,5 @@
 export const weeks = [
 	{
-		number: 8,
-		day: 1,
-		matchs: [
-			{ id: 811, team_blue: 4, team_red: 7, winner: null },
-			{ id: 812, team_blue: 3, team_red: 10, winner: null },
-			{ id: 813, team_blue: 6, team_red: 2, winner: null },
-			{ id: 814, team_blue: 5, team_red: 1, winner: null },
-			{ id: 815, team_blue: 9, team_red: 8, winner: null },
-		],
-	},
-	{
 		number: 9,
 		day: 1,
 		matchs: [

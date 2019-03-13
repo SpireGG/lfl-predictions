@@ -19,16 +19,16 @@ export const weeks = [
 	// 		{ id: 714, team_blue: 7, team_red: 6, winner: null },
 	// 	],
 	// },
-	{
-		number: 7,
-		day: 2,
-		matchs: [
-			{ id: 721, team_blue: 4, team_red: 2, winner: null },
-			{ id: 722, team_blue: 3, team_red: 1, winner: null },
-			{ id: 723, team_blue: 7, team_red: 5, winner: null },
-			{ id: 724, team_blue: 6, team_red: 8, winner: null },
-		],
-	},
+	// {
+	// 	number: 7,
+	// 	day: 2,
+	// 	matchs: [
+	// 		{ id: 721, team_blue: 4, team_red: 2, winner: null },
+	// 		{ id: 722, team_blue: 3, team_red: 1, winner: null },
+	// 		{ id: 723, team_blue: 7, team_red: 5, winner: null },
+	// 		{ id: 724, team_blue: 6, team_red: 8, winner: null },
+	// 	],
+	// },
 	{
 		number: 8,
 		day: 1,
