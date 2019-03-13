@@ -131,9 +131,8 @@ export default {
 		z-index: 99;
 		a {display: block;}
 		img {
-			height: 10rem;
-			min-width: 110px;
-			margin-top: 7rem;
+			height: 8rem;
+			margin-top: 5rem;
 		}
 	}
 	.lolpros-container {

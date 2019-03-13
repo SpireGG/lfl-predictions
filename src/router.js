@@ -11,7 +11,7 @@ const router = new Router({
 	routes: [
 		{
 			path: '/',
-			redirect: { name: 'league', params: { league: 'lfl' } },
+			redirect: { name: 'league', params: { league: 'lec' } },
 		},
 		{
 			path: '/:league',

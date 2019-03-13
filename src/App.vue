@@ -14,6 +14,11 @@ export default {
 	components: {
 		Navbar,
 	},
+	metaInfo() {
+		return {
+			titleTemplate: (titleChunk) => titleChunk ? `${titleChunk} Predictions | LOLPros.GG` : `Predictions | LOLPros.GG`,
+		};
+	},
 };
 </script>
 

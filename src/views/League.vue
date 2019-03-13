@@ -41,6 +41,11 @@ export default {
 		weeks() { return this.$store.state[this.league]['weeks']; },
 		locale() {return this.$store.state.language;},
 	},
+	metaInfo() {
+		return {
+			title: this.league.toUpperCase(),
+		};
+	},
 	methods: {
 		resetLadder() { this.$store.commit(`${this.league}/RESET`); },
 		toggleLanguage() {
