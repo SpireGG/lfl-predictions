@@ -8,7 +8,7 @@
 			<div class="team-list">
 				<draggable v-model="teams" @start="drag = true" @end="drag = false" v-bind="dragOptions">
 					<transition-group type="transition" :name="!drag ? 'flip-list' : null">
-						<div class="team" v-for="(team, index) in teams" :key="team.name">
+						<div class="team" v-for="team in teams" :key="team.name">
 							<img :src="`/assets/lfl/${team.logo}`" :alt="team.name">
 							<span class="name">{{ team.name }}</span>
 							<font-awesome-icon icon="grip-lines" />
