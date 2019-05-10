@@ -5,7 +5,7 @@
 				<div class="col-md-4 offset-md-4">
 					<dragger />
 					<div class="action">
-						<button class="button button-share" @click.prevent="openShare">
+						<button class="button button-share" @click.prevent="openShare" style="display: none">
 							<font-awesome-icon icon="share-square" /> Partager
 						</button>
 						<share-modal />

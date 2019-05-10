@@ -1,5 +1,4 @@
 module.exports = {
-	outputDir: '../public',
 	chainWebpack: config => {
 		config.module
 			.rule('eslint')
