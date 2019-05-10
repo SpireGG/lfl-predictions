@@ -14,17 +14,12 @@ export default {
 	components: {
 		Navbar,
 	},
-	metaInfo() {
-		return {
-			titleTemplate: (titleChunk) => titleChunk ? `${titleChunk} Predictions | LOLPros.GG` : `Predictions | LOLPros.GG`,
-		};
-	},
 };
 </script>
 
 <style>
-@import 'normalize.css/normalize.css';
-@import 'shoelace-css/dist/shoelace.css';
+@import '~normalize.css/normalize.css';
+@import '~shoelace-css/dist/shoelace.css';
 
 @font-face {
 	font-family: 'Leixo';
@@ -38,12 +33,13 @@ export default {
 #app {
 	font-family: Lato, 'Avenir', Helvetica, Arial, sans-serif;
 	text-align: center;
-	color: #2c3e50;
 	background-color: #e5e7ea;
 	min-height: 100vh;
+	color: #f1e6d2;
 }
 main {
 	padding-top: 5rem;
+	min-height: calc(100vh - 3.5rem);
 }
 a {
 	cursor: pointer;
@@ -59,7 +55,6 @@ a {
 	border: 2px solid #ffd866;
 	color: #fcd359;
 	text-transform: uppercase;
-  line-height: 1;
 	&:hover {
 		background-color: #0d0d0d;
 		color: #f1e6d2;
@@ -80,4 +75,5 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
 	background-color: #212529;
 }
+.v--modal-overlay .v--modal-box{border-radius: 0;}
 </style>

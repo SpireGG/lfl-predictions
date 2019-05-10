@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import League from '@/views/League.vue';
-// import Home from '@/views/Home.vue';
+import Home from '@/views/Home';
 
 Vue.use(Router);
 
@@ -9,15 +8,8 @@ const router = new Router({
 	mode: 'history',
 	base: process.env.BASE_URL,
 	routes: [
-		{
-			path: '/',
-			redirect: { name: 'league', params: { league: 'lec' } },
-		},
-		{
-			path: '/:league',
-			name: 'league',
-			component: League,
-		},
+		{ path: '/', name: 'home', component: Home },
 	],
 });
+
 export default router;
