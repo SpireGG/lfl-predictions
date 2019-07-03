@@ -8,11 +8,11 @@
 		</div>
 		<div class="container">
 			<div class="nav-content">
-				<router-link :to="{name: 'league', params: {league: 'lec'}}" class="nav-link">
+				<router-link :to="{name: 'league', params: {league: 'lec'}}" class="nav-link disabled">
 					<img src="/assets/logos/lec-logo.png" alt="LEC logo">
 					<span>LEC</span>
 				</router-link>
-				<router-link :to="{name: 'league', params: {league: 'lfl'}}" class="nav-link">
+				<router-link :to="{name: 'league', params: {league: 'lfl'}}" class="nav-link disabled">
 					<img src="/assets/logos/lfl-logo.png" alt="LFL logo">
 					<span>LFL</span>
 				</router-link>
@@ -20,16 +20,18 @@
 					<img src="/assets/logos/ul-logo.png" alt="UL logo">
 					<span>UL</span>
 				</a>
+				<div class="nav-link"></div>
 				<div class="logo">
 					<a href="/">
 						<img :src="`/assets/logos/${league}-logo.png`" alt="LFL logo">
 					</a>
 				</div>
-				<router-link :to="{name: 'league', params: {league: 'lvp'}}" class="nav-link">
+				<div class="nav-link"></div>
+				<router-link :to="{name: 'league', params: {league: 'lvp'}}" class="nav-link disabled">
 					<img src="/assets/logos/lvp-logo.png" alt="LVP logo">
 					<span>LVP</span>
 				</router-link>
-				<router-link :to="{name: 'league', params: {league: 'eslm'}}" class="nav-link">
+				<router-link :to="{name: 'league', params: {league: 'eslm'}}" class="nav-link disabled">
 					<img src="/assets/logos/eslm-logo.png" alt="ESLM logo">
 					<span>ESLM</span>
 				</router-link>
