@@ -1,6 +1,6 @@
 <template>
 	<div class="teams">
-		<header>Vos prédictions</header>
+		<header>LFL Spring 2020</header>
 		<div class="list">
 			<div class="indexes">
 				<div class="index" v-for="(team, index) in teams" :key="team.name">{{ index + 1}}</div>
@@ -55,6 +55,12 @@ export default {
 		border-bottom: 5px solid #191919;
 		text-align: center;
 		padding: .5rem .75rem;
+		font-size: 28px;
+		letter-spacing: .25rem;
+		background-image: linear-gradient(to bottom, #fce293, #b8933a);
+		line-height: normal;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 	.list {display: flex;}
 	.team-list {flex-grow: 1;}
