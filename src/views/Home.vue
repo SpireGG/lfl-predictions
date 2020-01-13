@@ -3,7 +3,10 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-4 offset-md-4">
-					<dragger />
+					<div class="teams">
+						<header :key="$route.params.league">{{ leagueName }}</header>
+						<dragger />
+					</div>
 					<div class="action">
 						<button class="button button-share" @click.prevent="openShare" style="display: none">
 							<font-awesome-icon icon="share-square" /> Partager
@@ -28,10 +31,9 @@ export default {
 	methods: {
 		openShare() { this.$modal.show('share-modal'); },
 	},
-	mounted() {
-		if (this.$route.params.league) {
-			this.$store.commit('SELECT_LEAGUE', this.$route.params.league);
-		}
+	computed: {
+		league() { return this.$store.state.selected_league; },
+		leagueName() {return this.$store.getters.league_name;},
 	},
 	watch: {
 		'$route.params.league'(value) {
@@ -42,9 +44,24 @@ export default {
 </script>
 
 <style scoped>
+	.teams {
+		margin-bottom: 2rem;
+		header {
+			background-color: #1e1e1e;
+			border-bottom: 5px solid #191919;
+			text-align: center;
+			padding: .5rem .75rem;
+			font-size: 28px;
+			letter-spacing: .25rem;
+			background-image: linear-gradient(to bottom, #fce293, #b8933a);
+			line-height: normal;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
 	.top-banner {
-		padding-top: 7rem;
-		height: calc(100vh - 5rem);
+		padding-top: 6rem;
+		min-height: calc(100vh - 5rem);
 		position: relative;
 		display: flex;
 		flex-direction: column;

@@ -1,41 +1,41 @@
 <template>
-	<div class="teams">
-		<header>LFL Spring 2020</header>
-		<div class="list">
-			<div class="indexes">
-				<div class="index" v-for="(team, index) in teams" :key="team.name">{{ index + 1}}</div>
-			</div>
-			<div class="team-list">
-				<draggable v-model="teams" @start="drag = true" @end="drag = false" v-bind="dragOptions">
-					<transition-group type="transition" :name="!drag ? 'flip-list' : null">
-						<div class="team" v-for="(team, index) in teams" :key="team.name">
-							<img :src="`/assets/lfl/${team.logo}`" :alt="team.name">
-							<span class="name">{{ team.name }}</span>
-							<font-awesome-icon icon="grip-lines" />
-							<div class="watermark" v-if="index === teams.length - 1">
-								<lolpros-logo />
-							</div>
+	<div class="list">
+		<div class="indexes">
+			<div class="index" v-for="(team, index) in teams" :key="team.name">{{ index + 1}}</div>
+		</div>
+		<div class="team-list">
+			<draggable v-model="teams" @start="drag = true" @end="drag = false" v-bind="dragOptions">
+				<transition-group type="transition" :name="!drag ? 'flip-list' : null">
+					<div class="team" v-for="(team, index) in teams" :key="team.name">
+						<img :src="`/assets/teams/${league}/${team.logo}`" :alt="team.name">
+						<span class="name">{{ team.name }}</span>
+						<font-awesome-icon icon="grip-lines" />
+						<div class="watermark" v-if="index === teams.length - 1">
+							<lolpros-logo />
 						</div>
-					</transition-group>
-				</draggable>
-			</div>
+					</div>
+				</transition-group>
+			</draggable>
 		</div>
 	</div>
 </template>
 
 <script>
 import draggable from 'vuedraggable';
-import { teams } from '@/static/teams';
 
 export default {
 	components: {
 		draggable,
 	},
 	data: () => ({
-		teams,
 		drag: false,
 	}),
 	computed: {
+		league() { return this.$store.state.selected_league; },
+		teams: {
+			get() {return this.$store.state[this.league]['teams'];},
+			set(value) {this.$store.commit(`${this.league}/UPDATE`, value);},
+		},
 		dragOptions() {
 			return {
 				animation: 200,
@@ -49,19 +49,6 @@ export default {
 </script>
 
 <style scoped>
-	.teams {margin-bottom: 2rem;}
-	header {
-		background-color: #1e1e1e;
-		border-bottom: 5px solid #191919;
-		text-align: center;
-		padding: .5rem .75rem;
-		font-size: 28px;
-		letter-spacing: .25rem;
-		background-image: linear-gradient(to bottom, #fce293, #b8933a);
-		line-height: normal;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
 	.list {display: flex;}
 	.team-list {flex-grow: 1;}
 

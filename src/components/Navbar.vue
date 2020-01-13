@@ -8,11 +8,27 @@
 		</div>
 		<div class="container">
 			<div class="nav-content">
+				<router-link :to="{name: 'home', params: {league: 'lfl'}}" class="nav-link" :active-class="'disabled'">
+					<img src="../static/assets/lfl-logo.png" alt="LFL logo">
+					<span>LFL</span>
+				</router-link>
+				<router-link :to="{name: 'home', params: {league: 'div2'}}" class="nav-link" :active-class="'disabled'">
+					<img src="../static/assets/div2-logo.png" alt="Division 2 logo">
+					<span>Division 2</span>
+				</router-link>
 				<div class="logo">
 					<a href="/">
-						<img src="../static/assets/lfl-logo.png" alt="LFL logo">
+						<img :src="`/assets/logos/${league}-logo.png`" :alt="leagueName">
 					</a>
 				</div>
+				<router-link :to="{name: 'home', params: {league: 'lec'}}" class="nav-link" :active-class="'disabled'">
+					<img src="../static/assets/lec-logo.png" alt="LEC logo">
+					<span>LEC</span>
+				</router-link>
+				<router-link :to="{name: 'home', params: {league: 'lcs'}}" class="nav-link" :active-class="'disabled'">
+					<img src="../static/assets/lcs-logo.png" alt="LCS logo">
+					<span>LCS</span>
+				</router-link>
 			</div>
 		</div>
 		<div class="twitter-container">
@@ -23,6 +39,15 @@
 		</div>
 	</div>
 </template>
+
+<script>
+export default {
+	computed: {
+		league() { return this.$store.state.selected_league; },
+		leagueName() {return this.$store.getters.league_name;},
+	},
+};
+</script>
 
 <style scoped>
 	.main-nav {
@@ -61,9 +86,36 @@
 		z-index: 99;
 		a {display: block;}
 		img {
-			height: 10rem;
-			min-width: 110px;
-			margin-top: 7rem;
+			height: 9rem;
+			min-width: 90px;
+			margin-top: 6rem;
+		}
+	}
+	.nav-link {
+		flex: 1;
+		height: 5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {height: 2rem;margin-right: .5rem;}
+		position: relative;
+		&.disabled {cursor: default;opacity: 0.5;}
+		&:not(.disabled):hover:before {
+			content: '';
+			opacity: 1;
+		}
+		&:before {
+			content: '';
+			height: 26px;
+			width: 154px;
+			position: absolute;
+			left: calc(50% - 77px);
+			bottom: -5px;
+			background-image: url(../static/assets/menu_current.png);
+			background-repeat: no-repeat;
+			transition: all 0.2s;
+			opacity: 0;
+			pointer-events: none;
 		}
 	}
 	.lolpros-container {

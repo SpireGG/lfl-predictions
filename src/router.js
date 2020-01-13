@@ -8,7 +8,7 @@ const router = new Router({
 	mode: 'history',
 	base: process.env.BASE_URL,
 	routes: [
-		{ path: '/', name: 'home', component: Home },
+		{ path: '/:league?', name: 'home', component: Home },
 		{ path: '*', redirect: '/' },
 	],
 });
