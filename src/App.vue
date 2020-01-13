@@ -29,6 +29,16 @@ export default {
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'Cocogoose';
+	src: url('./static/fonts/Cocogoose.woff2') format('woff2'),
+	url('./static/fonts/Cocogoose.woff') format('woff'),
+	url('./static/fonts/Cocogoose.eot') format('eot'),
+	url('./static/fonts/Cocogoose.ttf') format('ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
 
 #app {
 	font-family: Lato, 'Avenir', Helvetica, Arial, sans-serif;

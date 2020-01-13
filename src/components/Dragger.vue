@@ -8,10 +8,13 @@
 			<div class="team-list">
 				<draggable v-model="teams" @start="drag = true" @end="drag = false" v-bind="dragOptions">
 					<transition-group type="transition" :name="!drag ? 'flip-list' : null">
-						<div class="team" v-for="team in teams" :key="team.name">
+						<div class="team" v-for="(team, index) in teams" :key="team.name">
 							<img :src="`/assets/lfl/${team.logo}`" :alt="team.name">
 							<span class="name">{{ team.name }}</span>
 							<font-awesome-icon icon="grip-lines" />
+							<div class="watermark" v-if="index === teams.length - 1">
+								<lolpros-logo />
+							</div>
 						</div>
 					</transition-group>
 				</draggable>
@@ -58,6 +61,7 @@ export default {
 
 	.team, .index {
 		background-color: #1e1e1e;
+		position: relative;
 		display: flex;
 		align-items: center;
 		padding: 1rem 1rem;
@@ -72,4 +76,12 @@ export default {
 	.flip-list-move {transition: transform 0.5s;}
 	.no-move {transition: transform 0s;}
 	.ghost {opacity: 0.5; background: #1e1e1e;}
+
+	.watermark {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		font-size: .7rem;
+		opacity: .5;
+	}
 </style>

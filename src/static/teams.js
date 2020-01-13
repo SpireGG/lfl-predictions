@@ -1,8 +1,8 @@
 export const teams = [
 	{
 		id: 1,
-		name: "Team-LDLC",
-		logo: "team-ldlc.png",
+		name: "LDLC OL",
+		logo: "ldlc.png",
 	},
 	{
 		id: 2,
@@ -16,13 +16,13 @@ export const teams = [
 	},
 	{
 		id: 4,
-		name: "Against All Authority",
-		logo: "aaa.png",
+		name: "IZI Dream",
+		logo: "izidream.png",
 	},
 	{
 		id: 5,
-		name: "ROG Esport",
-		logo: "rogesport.png",
+		name: "GameWard",
+		logo: "gameward.png",
 	},
 	{
 		id: 6,
