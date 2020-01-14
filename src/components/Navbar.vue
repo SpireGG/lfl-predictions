@@ -2,39 +2,40 @@
 	<div class="main-nav">
 		<div class="lolpros-container">
 			<a href="//lolpros.gg" target="_blank" rel="noopener" class="lolpros-link">
-				<span class="subtitle">A tool by</span>
-				<lolpros-logo />
+				<span class="subtitle hide-sm-down">A tool by</span>
+				<lolpros-logo class="hide-sm-down" />
+				<img src="/logo-white.svg" alt="LOLPros.GG" class="hide-md-up">
 			</a>
 		</div>
 		<div class="container">
 			<div class="nav-content">
 				<router-link :to="{name: 'home', params: {league: 'lfl'}}" class="nav-link" :active-class="'disabled'">
 					<img src="../static/assets/lfl-logo.png" alt="LFL logo">
-					<span>LFL</span>
+					<span class="hide-md-down">LFL</span>
 				</router-link>
 				<router-link :to="{name: 'home', params: {league: 'div2'}}" class="nav-link" :active-class="'disabled'">
-					<img src="../static/assets/div2-logo.png" alt="Division 2 logo">
-					<span>Division 2</span>
+					<img src="../static/assets/div2-logo.png" class="nav-link-image" alt="Division 2 logo">
+					<span class="hide-md-down">Division 2</span>
 				</router-link>
-				<div class="logo">
+				<div class="logo hide-md-down">
 					<a href="/">
 						<img :src="`/assets/logos/${league}-logo.png`" :alt="leagueName">
 					</a>
 				</div>
 				<router-link :to="{name: 'home', params: {league: 'lec'}}" class="nav-link" :active-class="'disabled'">
 					<img src="../static/assets/lec-logo.png" alt="LEC logo">
-					<span>LEC</span>
+					<span class="hide-md-down">LEC</span>
 				</router-link>
 				<router-link :to="{name: 'home', params: {league: 'lcs'}}" class="nav-link" :active-class="'disabled'">
 					<img src="../static/assets/lcs-logo.png" alt="LCS logo">
-					<span>LCS</span>
+					<span class="hide-md-down">LCS</span>
 				</router-link>
 			</div>
 		</div>
 		<div class="twitter-container">
 			<a href="//twitter.com/Chypriote" target="_blank" class="twitter">
 				<font-awesome-icon :icon="['fab', 'twitter']" />
-				<span>Chypriote</span>
+				<span class="hide-sm-down">Chypriote</span>
 			</a>
 		</div>
 	</div>
@@ -97,7 +98,10 @@ export default {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		img {height: 2rem;margin-right: .5rem;}
+		img {
+			height: 2rem;margin-right: .5rem;
+			@media (max-width: 991px) {height: 3.5rem;margin-right: 0;}
+		}
 		position: relative;
 		&.disabled {cursor: default;opacity: 0.5;}
 		&:not(.disabled):hover:before {
@@ -134,11 +138,15 @@ export default {
 			font-size: .7rem;
 			color: #ccc;
 		}
+		img {@media (max-width: 991px) {min-width: 2rem; margin-right: 0;}}
 	}
 	.twitter {
 		display: flex;
 		align-items: center;
-		svg {color: #1da1f2;margin-right: .5rem}
+		svg {
+			color: #1da1f2;margin-right: .5rem;
+			@media (max-width: 991px) {font-size: 1.5rem; margin-right: 0;}
+		}
 		&:hover {color: #1da1f2;}
 	}
 </style>
