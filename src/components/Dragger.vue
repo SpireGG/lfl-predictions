@@ -59,6 +59,7 @@ export default {
 		align-items: center;
 		padding: 1rem 1rem;
 		font-size: 1.5rem;
+		@media (max-width: 767px) { font-size: 1rem; }
 		img {height: 2rem; width: auto; margin-right: 1rem;}
 		&:not(:last-of-type) {border-bottom: 3px solid #191919;}
 		.name {flex-grow: 1; text-align: left;}

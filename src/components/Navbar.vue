@@ -62,7 +62,13 @@ export default {
 		background-color: #181818;
 		display: flex;
 
-		.lolpros-container, .twitter-container {flex: 1;padding: 0 2rem;display: flex;align-items: center;}
+		.lolpros-container, .twitter-container {
+			flex: 1;
+			padding: 0 2rem;
+			display: flex;
+			align-items: center;
+			@media (max-width: 991px) { padding: 0 1rem; }
+		}
 		&:after {
 			content: '';
 			position: absolute;

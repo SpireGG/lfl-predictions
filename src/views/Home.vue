@@ -35,6 +35,11 @@ export default {
 		league() { return this.$store.state.selected_league; },
 		leagueName() {return this.$store.getters.league_name;},
 	},
+	mounted() {
+		if (this.$route.params.league) {
+			this.$store.commit('SELECT_LEAGUE', this.$route.params.league);
+		}
+	},
 	watch: {
 		'$route.params.league'(value) {
 			this.$store.commit('SELECT_LEAGUE', value);
