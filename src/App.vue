@@ -21,6 +21,14 @@ export default {
 @import '~normalize.css/normalize.css';
 @import '~shoelace-css/dist/shoelace.css';
 
+:root {
+	--primary: #fcd359;
+	--secondary: #181818;
+	--nav-primary: #181818;
+	--nav-secondary: #fcd359;
+	--header: #f1e6d2;
+}
+
 @font-face {
 	font-family: 'Leixo';
 	src: url('./static/fonts/Leixo.woff2') format('woff2'),
@@ -39,13 +47,18 @@ export default {
 	font-style: normal;
 }
 
-
 #app {
 	font-family: Lato, 'Avenir', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
-	background-color: #e5e7ea;
-	min-height: 100vh;
 	color: #f1e6d2;
+	min-height: 100vh;
+	height: 100vh;
+	background-image: url(./static/assets/declin-particule-left.png?809149183), url(./static/assets/declin-particule-right.png?809149183), url(./static/assets/declin-particule-bottom-left.png?809149183), url(./static/assets/declin-particule-bottom-right.png?809149183), linear-gradient(175deg, #1c1c1c, #0d0d0d);
+	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	background-position: top left, top right, bottom left, bottom right;
+	overflow-y: auto;
 }
 main {
 	padding-top: 5rem;
@@ -86,4 +99,19 @@ body::-webkit-scrollbar-thumb {
 	background-color: #212529;
 }
 .v--modal-overlay .v--modal-box{border-radius: 0;}
+.lfl-btn {
+	background-color: #181818;
+	border: 2px solid #ffd866;
+	color: #fcd359;
+	text-transform: uppercase;
+	line-height: 1;
+	transition: all 200ms ease-in-out;
+
+	&:hover {
+		background-color: #0d0d0d;
+		color: #f1e6d2;
+		border: 2px solid #ffd866;
+	}
+	& + .button {margin-left: 2rem;}
+}
 </style>

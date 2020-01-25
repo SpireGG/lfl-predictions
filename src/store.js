@@ -12,9 +12,22 @@ export default new Vuex.Store({
 	state: {
 		selected_league: 'lfl',
 		language: 'en',
+		selected: {
+			top: null,
+			jungle: null,
+			mid: null,
+			bottom: null,
+			support: null,
+		},
+		last_saved: false,
 	},
 	getters: {
 		league_name: state => state[state.selected_league]['name'],
+		selectedTop: state => state.selected.top,
+		selectedJungle: state => state.selected.jungle,
+		selectedMid: state => state.selected.mid,
+		selectedBottom: state => state.selected.bottom,
+		selectedSupport: state => state.selected.support,
 	},
 	mutations: {
 		SELECT_LEAGUE(state, value) {
@@ -22,6 +35,20 @@ export default new Vuex.Store({
 		},
 		TOGGLE_LANGUAGE(state, language) {
 			state.language = language;
+		},
+		async SELECT_PLAYER(state, payload) {
+			state.selected[payload.position] = payload.player;
+		},
+		async REMOVE_PLAYER(state, position) {
+			state.selected[position] = null;
+		},
+		SET_LAST_SAVED(state) {
+			state.last_saved = new Date();
+		},
+	},
+	actions: {
+		async SELECT_PLAYER({ commit }, selection) {
+			return await commit('SELECT_PLAYER', selection);
 		},
 	},
 	modules: {

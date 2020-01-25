@@ -59,13 +59,15 @@ export default {
 		align-items: center;
 		padding: 1rem 1rem;
 		font-size: 1.5rem;
-		@media (max-width: 767px) { font-size: 1rem; }
 		img {height: 2rem; width: auto; margin-right: 1rem;}
 		&:not(:last-of-type) {border-bottom: 3px solid #191919;}
 		.name {flex-grow: 1; text-align: left;}
 		svg {cursor: grab;font-size: 1rem;opacity: .8;}
 	}
-	.index {margin-right: .5rem;}
+	.index {
+		margin-right: .5rem;
+		justify-content: center;
+	}
 
 	.flip-list-move {transition: transform 0.5s;}
 	.no-move {transition: transform 0s;}

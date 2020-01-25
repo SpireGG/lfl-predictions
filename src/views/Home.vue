@@ -1,10 +1,10 @@
 <template>
-	<div class="top-banner">
+	<div>
+		<Heading :title="leagueName" />
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
 					<div class="teams">
-						<header :key="$route.params.league">{{ leagueName }}</header>
 						<dragger />
 					</div>
 					<div class="action">
@@ -21,10 +21,12 @@
 
 <script>
 import Dragger from '@/components/Dragger';
-import ShareModal from "../components/ShareModal";
+import ShareModal from "@/components/ShareModal";
+import Heading from '@/components/Heading/Heading';
 
 export default {
 	components: {
+		Heading,
 		ShareModal,
 		Dragger,
 	},
@@ -71,9 +73,6 @@ export default {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		background-image: url(../static/assets/declin-particule-left.png?809149183), url(../static/assets/declin-particule-right.png?809149183), url(../static/assets/declin-particule-bottom-left.png?809149183), url(../static/assets/declin-particule-bottom-right.png?809149183), linear-gradient(175deg, #1c1c1c, #0d0d0d);
-		background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-		background-position: top left, top right, bottom left, bottom right;
 		@media (max-width: 991px) {padding-top: 3rem;}
 	}
 	.button-share {
