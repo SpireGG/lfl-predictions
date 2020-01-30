@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import VuexPersistence from 'vuex-persist';
 
 import lfl from '@/store/lfl';
 import div2 from '@/store/div2';
@@ -7,8 +8,12 @@ import lec from '@/store/lec';
 import lcs from '@/store/lcs';
 
 Vue.use(Vuex);
+const vuexLocal = new VuexPersistence({
+	storage: window.localStorage,
+});
 
 export default new Vuex.Store({
+	plugins: [vuexLocal.plugin],
 	state: {
 		selected_league: 'lfl',
 		language: 'en',

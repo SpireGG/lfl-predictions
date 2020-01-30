@@ -54,9 +54,6 @@ export default {
 </script>
 
 <style scoped>
-	.team {
-		padding: 2rem 0;
-	}
 	.deletable:hover {
 		opacity: .1;
 		cursor: pointer;
