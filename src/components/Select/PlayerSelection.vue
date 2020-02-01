@@ -3,7 +3,7 @@
 		<div class="team">
 			<div class="container">
 				<div class="row">
-					<div class="col col-3" v-for="player in players" :key="player.pseudo">
+					<div class="col col-6 col-sm-4 col-md-3" v-for="player in players" :key="player.pseudo">
 						<div @click="selectPlayer(player)" class="select-player">
 							<div class="overlay">
 								<span>Select</span>

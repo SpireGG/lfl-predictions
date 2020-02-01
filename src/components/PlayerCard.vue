@@ -34,7 +34,6 @@ export default {
 		padding: .75rem;
 	}
 	.card-background {
-		height: 17rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
