@@ -1,6 +1,6 @@
 <template>
 	<div id="team-of-the-week">
-		<Heading :title="'Week#2'" />
+		<Heading :title="'All Star'" />
 		<TeamContainer :players="players" />
 	</div>
 </template>
