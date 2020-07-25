@@ -1,8 +1,8 @@
 export const teams = [
 	{
 		id: 1,
-		name: "Bastille Legacy",
-		logo: "bastille.png",
+		name: "Team BDS",
+		logo: "teambds.png",
 	},
 	{
 		id: 2,
@@ -41,8 +41,8 @@ export const teams = [
 	},
 	{
 		id: 9,
-		name: "Unfazed Esport",
-		logo: "unfazed.png",
+		name: "K-Corp",
+		logo: "kcorp.png",
 	},
 	{
 		id: 10,
