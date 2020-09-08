@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="* col-md-4 offset-md-1">
 				<div class="sticky">
-					<h1><lolpros-logo/> Predictions</h1>
+					<h1>LFL Predictions</h1>
 					<ladder />
 					<div class="action">
 						<button class="button" @click="resetLadder">{{ $t('ladder.reset') }}</button>
@@ -86,7 +86,7 @@ export default {
 	background-position: top left, top right, bottom left, bottom right;
 }
 h1 {
-	font-family: serif;
+	font-family: sans-serif;
 	letter-spacing: 8px;
 	margin-bottom: 2rem;
 	color: #fcd359;

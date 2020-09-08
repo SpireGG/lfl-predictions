@@ -1,14 +1,13 @@
 <template>
-	<span class="lp-logo"><span class="accent">LoL</span>Pros.GG</span>
+	<span class="logo">LoLPros<span class="accent">.GG</span></span>
 </template>
 
 <style scoped>
-.lp-logo {
-	font-family: 'Leixo', Lato, sans-serif;
-	font-weight: bold;
-	color: #fff;
-	letter-spacing: initial;
-	line-height: initial;
-	.accent {color: #08bfd5;}
-}
+	.logo {
+		font-family: 'Cocogoose', Lato, sans-serif;
+		color: #fff;
+		text-transform: uppercase;
+		font-weight: normal;
+		.accent {color: #08bfd5;}
+	}
 </style>
