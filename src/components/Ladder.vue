@@ -22,11 +22,10 @@
 </template>
 
 <script>
-import { orderBy } from 'lodash-es';
 export default {
 	computed: {
 		league() { return this.$store.state.selected_league; },
-		ladder() { return orderBy(this.$store.getters[`${this.league}/ladder`], ['wins', 'name'], ['desc', 'asc']);},
+		ladder() { return this.$store.getters[`${this.league}/ladder`];},
 	},
 };
 </script>

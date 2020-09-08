@@ -2,10 +2,19 @@
 <div class="top-banner">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="* col-md-4 offset-md-1">
+			<div class="col-md-4 offset-md-1">
 				<div class="sticky">
 					<h1>LFL Predictions</h1>
-					<ladder />
+					<div class="row">
+						<div class="col">
+							<ladder />
+						</div>
+					</div>
+					<div class="row" v-if="has_tiebreak">
+						<div class="col">
+							<tie-break />
+						</div>
+					</div>
 					<div class="action">
 						<button class="button" @click="resetLadder">{{ $t('ladder.reset') }}</button>
 						<button class="button" @click="toggleLanguage">
@@ -14,8 +23,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="* col-md-5 offset-md-1">
-				<div class="row" v-for="week in weeks" :key="`${week.number}${week.day}`">
+			<div class="col-md-5 offset-md-1">
+				<div class="row" v-for="week in displayed_weeks" :key="`${week.number}${week.day}`">
 					<div class="col">
 						<week :week="week"></week>
 					</div>
@@ -29,17 +38,22 @@
 <script>
 import Ladder from '@/components/Ladder.vue';
 import Week from '@/components/Week.vue';
+import TieBreak from '@/components/TieBreak.vue';
 
 export default {
 	name: 'league',
 	components: {
 		Ladder,
 		Week,
+		TieBreak,
 	},
 	computed: {
 		league() { return this.$store.state.selected_league; },
 		weeks() { return this.$store.state[this.league]['weeks']; },
 		locale() {return this.$store.state.language;},
+		displayed_weeks() {return this.weeks.filter(week => week.displayed);},
+		tiebreaks() {return this.$store.getters[`${this.league}/tiebreaks`];},
+		has_tiebreak() { return this.tiebreaks && this.tiebreaks.length;},
 	},
 	metaInfo() {
 		return {

@@ -1,4 +1,4 @@
-import { find, map, each, cloneDeep } from 'lodash-es';
+import { find, map, each, cloneDeep, groupBy, orderBy, filter } from 'lodash-es';
 import { teams } from '@/static/lfl/teams';
 import { weeks } from '@/static/lfl/weeks';
 
@@ -34,7 +34,7 @@ const LFLModule = {
 			return find(state.teams, team => team.id === id);
 		},
 		ladder: (state) => {
-			return map(state.teams, team => {
+			return orderBy(map(state.teams, team => {
 				//Dirty thing to find total wins and losses
 				let losses = team.losses;
 				let wins = team.wins;
@@ -46,7 +46,10 @@ const LFLModule = {
 					});
 				});
 				return Object.assign({}, team, { wins, losses });
-			});
+			}), ['wins', 'name'], ['desc', 'asc']);
+		},
+		tiebreaks: (state, getters) => {
+			return filter(groupBy(getters.ladder, 'wins'), (tie => tie.length > 1));
 		},
 	},
 };

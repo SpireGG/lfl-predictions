@@ -9,3 +9,5 @@ ladder.reset: Reset
 
 week.week: Semaine {nb}
 week.day: Jour {nb}
+
+tiebreakers: Tiebreakers
