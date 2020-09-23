@@ -15,10 +15,10 @@ export const weeks = [
 		day: 1,
 		displayed: true,
 		matchs: [
-			{ id: 611, team_blue: 5, team_red: 6, winner: null },
-			{ id: 612, team_blue: 7, team_red: 3, winner: null },
-			{ id: 613, team_blue: 8, team_red: 1, winner: null },
-			{ id: 614, team_blue: 4, team_red: 2, winner: null },
+			{ id: 611, team_blue: 5, team_red: 6, winner: 6 },
+			{ id: 612, team_blue: 7, team_red: 3, winner: 3 },
+			{ id: 613, team_blue: 8, team_red: 1, winner: 1 },
+			{ id: 614, team_blue: 4, team_red: 2, winner: 4 },
 		],
 	},
 	{
