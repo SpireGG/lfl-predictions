@@ -3,7 +3,7 @@ import { teams } from '@/static/teams/lcs';
 
 function initialState() {
 	return {
-		name: 'LCS Spring 2020',
+		name: 'LCS Spring 2021',
 		teams: cloneDeep(teams),
 	};
 }

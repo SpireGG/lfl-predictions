@@ -38,5 +38,6 @@ export default {
 		justify-content: center;
 		align-items: center;
 		height: 25vh;
+		@media (max-width: 1200px) {height: 4rem;}
 	}
 </style>

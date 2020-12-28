@@ -96,6 +96,7 @@ export default {
 			height: 9rem;
 			min-width: 90px;
 			margin-top: 6rem;
+			@media (max-width: 1200px) {height: 4rem;margin-top:0;min-width:initial;}
 		}
 	}
 	.nav-link {
