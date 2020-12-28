@@ -16,26 +16,36 @@ export const teams = [
 	},
 	{
 		id: 4,
+		name: "Karmine Corp",
+		logo: "kcorp.png",
+	},
+	{
+		id: 5,
 		name: "Misfits Premier",
 		logo: "misfits.png",
 	},
 	{
-		id: 5,
+		id: 6,
 		name: "Solary",
 		logo: "solary.png",
 	},
 	{
-		id: 6,
+		id: 7,
+		name: "Team BDS",
+		logo: "teambds.png",
+	},
+	{
+		id: 8,
 		name: "Team MCES",
 		logo: "mces.png",
 	},
 	{
-		id: 7,
+		id: 9,
 		name: "LDLC OL",
 		logo: "ldlc.png",
 	},
 	{
-		id: 8,
+		id: 10,
 		name: "Vitality.Bee",
 		logo: "vitality.png",
 	},
