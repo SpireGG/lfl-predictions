@@ -7,11 +7,11 @@ export const weeks = [
 		day: 1,
 		displayed: true,
 		matchs: [
-			{ id: 811, team_blue: t.SOLARY, team_red: t.TEAM_MCES, winner: null },
-			{ id: 812, team_blue: t.KARMINE_CORP, team_red: t.IZI_DREAM, winner: null },
-			{ id: 813, team_blue: t.MISFITS_PREMIER, team_red: t.VITALITY_BEE, winner: null },
-			{ id: 814, team_blue: t.GAMERSORIGIN, team_red: t.GAMEWARD, winner: null },
-			{ id: 815, team_blue: t.TEAM_BDS, team_red: t.TEAM_LDLC, winner: null },
+			{ id: 811, team_blue: t.SOLARY, team_red: t.TEAM_MCES, winner: t.SOLARY },
+			{ id: 812, team_blue: t.KARMINE_CORP, team_red: t.IZI_DREAM, winner: t.IZI_DREAM },
+			{ id: 813, team_blue: t.MISFITS_PREMIER, team_red: t.VITALITY_BEE, winner: t.MISFITS_PREMIER },
+			{ id: 814, team_blue: t.GAMERSORIGIN, team_red: t.GAMEWARD, winner: t.GAMEWARD },
+			{ id: 815, team_blue: t.TEAM_BDS, team_red: t.TEAM_LDLC, winner: t.TEAM_BDS },
 		],
 	},
 	{
