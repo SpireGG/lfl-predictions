@@ -26,7 +26,7 @@ module.exports = {
 		'no-tab': 0,
 		'import/no-unresolved': 0,
 		'import/prefer-default-export': 0,
-		'vue/no-mutating-props': 0
+		'vue/no-mutating-props': 0,
 	},
 	parserOptions: {
 		parser: 'babel-eslint',

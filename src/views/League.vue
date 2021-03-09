@@ -10,7 +10,7 @@
 							<ladder />
 						</div>
 					</div>
-					<div class="row" v-if="has_tiebreak && false">
+					<div class="row" v-if="has_tiebreak">
 						<div class="col">
 							<tie-break />
 						</div>
