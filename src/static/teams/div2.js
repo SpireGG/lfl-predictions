@@ -6,8 +6,8 @@ export const teams = [
 	},
 	{
 		id: 2,
-		name: "Elyandra",
-		logo: "elyandra.png",
+		name: "BK ROG",
+		logo: "bkrog.png",
 	},
 	{
 		id: 3,
@@ -16,37 +16,37 @@ export const teams = [
 	},
 	{
 		id: 4,
-		name: "GamersOrigin Academy",
-		logo: "gamersorigin.png",
-	},
-	{
-		id: 5,
 		name: "GameWard Academy",
 		logo: "gameward.png",
 	},
 	{
+		id: 5,
+		name: "IZI Dream",
+		logo: "izidream.png",
+	},
+	{
 		id: 6,
-		name: "Solary Academy",
-		logo: "lunary.png",
+		name: "Joblife",
+		logo: "joblife.png",
 	},
 	{
 		id: 7,
-		name: "M'AZING",
-		logo: "mces.png",
+		name: "Lille Esport",
+		logo: "lilleesport.png",
 	},
 	{
 		id: 8,
-		name: "Team Oplon",
-		logo: "oplon.png",
+		name: "PCS Taran",
+		logo: "pcstaran.png",
 	},
 	{
 		id: 9,
-		name: "TP Adequat Academy",
-		logo: "ldlcacademie.png",
+		name: "Team MCES",
+		logo: "mces.png",
 	},
 	{
 		id: 10,
-		name: "Zephyr Esport",
-		logo: "zephyr.png",
+		name: "TP Adequat Academy",
+		logo: "ldlcacademie.png",
 	},
 ];

@@ -11,13 +11,13 @@ export const teams = [
 	},
 	{
 		id: 3,
-		name: "IZI Dream",
-		logo: "izidream.png",
+		name: "Karmine Corp",
+		logo: "kcorp.png",
 	},
 	{
 		id: 4,
-		name: "Karmine Corp",
-		logo: "kcorp.png",
+		name: "Mirage Elyandra",
+		logo: "mirage.png",
 	},
 	{
 		id: 5,
@@ -31,13 +31,13 @@ export const teams = [
 	},
 	{
 		id: 7,
-		name: "Team BDS",
+		name: "Team BDS Academy",
 		logo: "teambds.png",
 	},
 	{
 		id: 8,
-		name: "Team MCES",
-		logo: "mces.png",
+		name: "Team Oplon",
+		logo: "oplon.png",
 	},
 	{
 		id: 9,

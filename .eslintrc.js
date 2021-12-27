@@ -1,11 +1,15 @@
 module.exports = {
 	root: true,
 	env: {
+		browser: true,
 		node: true,
 	},
 	extends: [
 		'plugin:vue/essential',
 		'eslint:recommended',
+	],
+	plugins: [
+		'vue',
 	],
 	rules: {
 		'class-methods-use-this': 0,
@@ -26,11 +30,10 @@ module.exports = {
 		'no-tab': 0,
 		'import/no-unresolved': 0,
 		'import/prefer-default-export': 0,
+		'vue/no-mutating-props': 0,
+		'vue/multi-word-component-names': 0,
 	},
 	parserOptions: {
 		parser: 'babel-eslint',
-	},
-	globals: {
-		process: false,
 	},
 };

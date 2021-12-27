@@ -3,7 +3,7 @@ import { teams } from '@/static/teams/div2';
 
 function initialState() {
 	return {
-		name: 'Division 2 2021',
+		name: 'Division 2 2022',
 		teams: cloneDeep(teams),
 	};
 }

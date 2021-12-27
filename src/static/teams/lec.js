@@ -1,13 +1,13 @@
 export const teams = [
 	{
 		id: 1,
-		name: "Excel Esports",
-		logo: "excel.png",
+		name: "Astralis",
+		logo: "astralis.png",
 	},
 	{
 		id: 2,
-		name: "FC Schalke 04",
-		logo: "schalke.png",
+		name: "Excel Esports",
+		logo: "excel.png",
 	},
 	{
 		id: 3,
@@ -31,18 +31,18 @@ export const teams = [
 	},
 	{
 		id: 7,
-		name: "Origen",
-		logo: "origen.png",
-	},
-	{
-		id: 8,
 		name: "Rogue",
 		logo: "rogue.png",
 	},
 	{
-		id: 9,
+		id: 8,
 		name: "SK Gaming",
 		logo: "skgaming.png",
+	},
+	{
+		id: 9,
+		name: "Team BDS",
+		logo: "team-bds.png",
 	},
 	{
 		id: 10,
